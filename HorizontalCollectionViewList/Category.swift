@@ -13,6 +13,6 @@ struct Category {
 }
 
 struct Product {
-    let id: String
+  
     let title: String
 }

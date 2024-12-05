@@ -36,7 +36,7 @@ class CustomCollectionViewCell: UICollectionViewCell {
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesBegan(touches, with: event)
-        action?(product?.id ?? "")
+        action?(product?.title ?? "")
     }
 	
 	// Метод для конфигурации ячейки

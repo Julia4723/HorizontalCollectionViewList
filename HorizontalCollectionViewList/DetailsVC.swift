@@ -8,8 +8,11 @@
 import UIKit
 
 class DetailsVC: UIViewController {
+    
+    //MARK: - Private Property
     private let titleLabel = UILabel()
     
+    //MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
@@ -18,11 +21,13 @@ class DetailsVC: UIViewController {
         setupLayout()
     }
     
+    //MARK: - Methods
     func configure(product: String) {
         titleLabel.text = product
     }
 }
 
+//MARK: - Methods
 extension DetailsVC {
     private func setupLabel() {
         titleLabel.textAlignment = .center
