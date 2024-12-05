@@ -11,7 +11,6 @@ class CustomTableViewCell: UITableViewCell {
     
     //MARK: - Private Property
     private let cellIdentifier = "CollectionContainerViewCell"
-    private let customTableVC = CustomCollectionViewCell()
     private var productsArray: [Product] = []
     
     var action: ((String) -> ())?

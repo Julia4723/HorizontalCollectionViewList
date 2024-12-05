@@ -12,7 +12,6 @@ class ViewController: UIViewController {
     //MARK: - Private Property
     private let cellIdentifier = "cellIdentifier"
     private let tableView = UITableView()
-    private var label = UILabel()
     private var categories: [Category] = []
     
     var categoryManager: ICategoryManager?
@@ -93,7 +92,6 @@ extension ViewController: UITableViewDataSource {
             withIdentifier: cellIdentifier,
             for: indexPath
         ) as? CustomTableViewCell else { return UITableViewCell() }
-        
         
         let category = categories[indexPath.section]
         
