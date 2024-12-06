@@ -49,6 +49,7 @@ extension CustomTableViewCell {
         
         contentView.addSubview(collectionView)
         collectionView.dataSource = self
+        collectionView.delegate = self
         collectionView.register(CustomCollectionViewCell.self, forCellWithReuseIdentifier: cellIdentifier)
     }
 }
@@ -87,11 +88,17 @@ extension CustomTableViewCell: UICollectionViewDataSource {
         
         cell.configure(with: content.title) //конфигурируем в ячейку title этого продукта
         
-        cell.action = { _ in
-            self.action?(content.title)
-        }
-        
         cell.backgroundColor = .cyan // Делаем ячейку заметной.
         return cell
+    }
+}
+
+
+extension CustomTableViewCell: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        let content = productsArray[indexPath.row]
+       
+        action?(content.title)
     }
 }

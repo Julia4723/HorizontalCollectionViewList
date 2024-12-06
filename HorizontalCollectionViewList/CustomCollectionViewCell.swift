@@ -9,7 +9,7 @@ import UIKit
 
 class CustomCollectionViewCell: UICollectionViewCell {
 	
-    var action: ((String) -> ())?
+    //var action: ((String) -> ())?
     
 	// Создаем UILabel
 	private let titleLabel = UILabel()
@@ -36,7 +36,7 @@ class CustomCollectionViewCell: UICollectionViewCell {
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesBegan(touches, with: event)
-        action?(product?.title ?? "")
+       // action?(product?.title ?? "")
     }
 	
 	// Метод для конфигурации ячейки
